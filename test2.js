@@ -21,9 +21,11 @@ let scaleFactor = 1;
 const countDisplay = document.getElementById('count');
 
 function setup() {
-    let cnv = createCanvas(size, size);
+    let cnv = createCanvas(window.innerWidth, window.innerHeight);
     cnv.parent('generativeCanvas');
 }
+
+
 
 // p5 calls this once per key press
 function keyPressed() {

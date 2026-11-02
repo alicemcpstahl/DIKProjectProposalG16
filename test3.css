@@ -1,0 +1,52 @@
+body {
+    margin: 0;
+    overflow: hidden;
+    background-color: #05050a;
+    font-family: monospace;
+}
+
+#generativeCanvas {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+#ui-overlay {
+    position: absolute;
+    top: 20px;
+    left: 20px;
+    color: #00ffcc;
+    pointer-events: none;
+    text-shadow: 0 0 5px rgba(0, 255, 204, 0.5);
+}
+
+.key-count {
+    font-size: 24px;
+    font-weight: bold;
+    margin: 8px 0;
+}
+
+/* One small box per active key */
+.key-chip {
+    display: inline-block;
+    border: 1px solid #00ffcc;
+    border-radius: 4px;
+    padding: 2px 8px;
+    margin: 2px 4px 2px 0;
+}
+
+#reset {
+    pointer-events: auto;
+    /* the overlay ignores the mouse, the button must not */
+    font-family: monospace;
+    background: transparent;
+    color: #00ffcc;
+    border: 1px solid #00ffcc;
+    padding: 6px 12px;
+    cursor: pointer;
+}
+
+#reset:hover {
+    background: rgba(0, 255, 204, 0.2);
+}
