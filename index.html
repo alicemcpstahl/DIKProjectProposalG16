@@ -4,11 +4,50 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>BEANS Generative Visuals</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="icon" type="image/x-icon" href="/images/favicon.png">
 </head>
 
 <body>
+    <div class="wrapper">
+        <header>
+            <div class="header">
+                <h1>Spill The B.E.A.N.S</h1>
+            </div>
+        </header>
+        <div class="main">
+            <div class="visualsBox">
 
+            </div>
+
+            <div class="whyBean">
+                <button class="open-button" onclick="openForm()">i</button>
+
+                <div class="form-popup" id="myForm">
+                    <form action="/action_page.php" class="form-container">
+                        <div class="formTop">
+                            <div class="formh2">
+                                <h2>What do the B.E.A.N.S mean?</h2>
+                            </div>
+                            <div class="formX">
+                                <button type="button" class="btn cancel" onclick="closeForm()">X</button>
+                            </div>
+                        </div>
+                        <p>It's an acronym! <br> <br>
+                            Beats, Effects And Noisy Sounds</p>
+                    </form>
+                </div>
+            </div>
+        </div>
+        <footer>
+            <div class="footer">
+
+            </div>
+        </footer>
+    </div>
+
+    <script src="script.js"></script>
 </body>
 
 </html>

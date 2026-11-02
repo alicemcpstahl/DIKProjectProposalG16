@@ -1,0 +1,131 @@
+/* FONTS */
+@font-face {
+    font-family: "oswald";
+    src: url(fonts/Oswald-Regular.ttf);
+}
+
+.Oswald-Regular.ttf {
+    font-family: "oswald", system-ui;
+    font-weight: 400;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: "monserrat";
+    src: url(fonts/Montserrat-Regular.ttf);
+}
+
+.Montserrat-Regular.ttf {
+    font-family: "monserrat", system-ui;
+    font-weight: 400;
+    font-style: normal;
+}
+
+/* BASICS */
+h1 {
+    font-family: 'oswald', system-ui;
+    font-size: 3rem;
+    letter-spacing: 10%;
+    color: #121fcf;
+    background-image: linear-gradient(to right, #8a79b7 0%, #8ec55e, #1989d8, #c61f72 100%);
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    width: fit-content;
+}
+
+h2 {
+    font-family: 'oswald', system-ui;
+    font-size: 1rem;
+    letter-spacing: 5%;
+    color: #1989d8;
+}
+
+p {
+    font-family: 'monserrat', system-ui;
+}
+
+/* COLOURS */
+/* 
+yellow=#ffde59,
+pink=#ff70ba
+purple=#8a79b7
+blue=#1989d8 
+green=#8ec55e
+dark pink=#c61f72
+orange=#ffad85
+*/
+
+/* PAGE */
+body {
+    background: #EEAECA;
+    background: radial-gradient(circle, #ffde59 0%, #ff70ba 100%);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+
+/* Info button */
+/* Button used to open the contact form - fixed at the bottom of the page */
+.open-button {
+    width: 2rem;
+    height: 2rem;
+    background-color: #1989d8;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    cursor: pointer;
+    position: fixed;
+    bottom: 2%;
+    right: 2%;
+}
+
+/* The popup form - hidden by default */
+.form-popup {
+    display: none;
+    position: fixed;
+    bottom: 2%;
+    right: 15px;
+    border-style: solid;
+    border-color: #8a79b7;
+    border-width: 3px;
+    border-radius: 8px;
+    z-index: 9;
+    max-width: 15rem;
+    padding: 2%;
+    background-color: #ffad85;
+    border-radius: 8px;
+}
+
+.formTop {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.cancel {
+    width: 2rem;
+    height: 2rem;
+    background-color: #8a79b7;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    cursor: pointer;
+    text-align: center;
+    font-family: 'oswald', system-ui;
+    font-size: 1rem;
+}
+
+/* Add some hover effects to buttons */
+.form-container .btn:hover,
+.open-button:hover {
+    opacity: 1;
+}
