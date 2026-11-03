@@ -101,8 +101,8 @@ function draw() {
     let n = activeKeys.size;
 
  //intensivare animationen med flera akrriva knappar
-    let targetSpeed = 1 + n * 0.8;
-    let targetScale = 1 + n * 0.15;
+    let targetSpeed = 1 + n * 0.15;
+    let targetScale = 1 + n * 0.12;
 
     speed = lerp(speed, targetSpeed, 0.1);
     scaleFactor = lerp(scaleFactor, targetScale, 0.1);
@@ -123,13 +123,24 @@ function draw() {
    let x = centerX + sin(angle * (0.5 + i * 0.03) + i * 2.4) * spaceX;
    let y = centerY + cos(angle * (0.4 + i * 0.025) + i * 3.1) * spaceY;
  
-    // Olika storlekar
-    let baseSize = 15 + (i % 5) * 13;
-    let pulse = sin(angle * 2 + i) * 8;
-    let ballSize = (baseSize + pulse) * scaleFactor;
+ // Olika storlekar på bubblorna
+   let baseSize ;
+   if(i % 8===0){
+    baseSize = 90; 
+ } else if (i % 4 === 0) {
+    baseSize=55;
+ } else {
+  baseSize = 18+(i % 5) *13;
+ }
 
-    // Välj färg
+ let pulse = sin(angle *2 + i)*8;
 
+
+  // Vissa bubblor växer extra mycket när fler beats aktiveras
+   let extraGrowth = (i % 4 === 0) ? n * 12 : n * 3;
+   let ballSize = (baseSize + pulse + extraGrowth) * scaleFactor;
+
+ // Välj färg
     let ballColor = color(palette[i % palette.length]);
     push();
 
