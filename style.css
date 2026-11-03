@@ -80,7 +80,7 @@ body {
     transition: background-color 0.3s ease;
     cursor: pointer;
     position: fixed;
-    bottom: 2%;
+    top: 2%;
     right: 2%;
 }
 
@@ -88,13 +88,13 @@ body {
 .form-popup {
     display: none;
     position: fixed;
-    bottom: 2%;
+    top: 5%;
+    bottom: auto;
     right: 15px;
     border-style: solid;
     border-color: #8a79b7;
     border-width: 3px;
     border-radius: 8px;
-    z-index: 9;
     max-width: 15rem;
     padding: 2%;
     background-color: #ffad85;
@@ -196,6 +196,10 @@ h1 {
     font-size: 1.5rem;
     cursor: pointer;
     transition: transform 0.3s ease, opacity 0.3s ease;
+    position: fixed;
+    bottom: 2%;
+    right: 2%;
+    z-index: 10;
 }
 
 /* Effekt när man håller muspekaren över knappen */

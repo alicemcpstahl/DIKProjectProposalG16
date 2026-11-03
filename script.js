@@ -36,7 +36,7 @@ let scaleFactor = 1;
 const keysDisplay = document.getElementById('keys');
 
 function setup() {
-    let cnv = createCanvas(window.innerWidth, window.innerHeight * 0.6);
+    let cnv = createCanvas(window.innerWidth, window.innerHeight * 1.0);
     cnv.parent('generativeCanvas');
     updateKeyList();
 
@@ -47,7 +47,7 @@ function setup() {
 }
 
 function windowResized() {
-    resizeCanvas(windowWidth, windowHeight *0.6);
+    resizeCanvas(windowWidth, windowHeight *1.0);
 }
 
 // Turn off every key at once
@@ -115,9 +115,9 @@ function draw() {
     let spaceX = min(width * 0.35, height * 0.55);
     let spaceY = height * 0.32;
 
-    // Skapa 24 animerade bubblor
+    // Skapa 55 animerade bubblor
 
-    for (let i = 0; i < 24; i++) {
+    for (let i = 0; i < 50; i++) {
 
    // eget rörelse
    let x = centerX + sin(angle * (0.5 + i * 0.03) + i * 2.4) * spaceX;
