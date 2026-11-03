@@ -17,7 +17,14 @@
             </div>
         </header>
         <div class="main">
-            <div class="visualsBox">
+            <div class="visualsBox" id="visualsBox">
+                <!-- visar de animerad cicklarna-->
+                <div id="generativeCanvas"> </div>
+                <!--  visar vilka tangenter som är aktiva -->
+                <div class="controls">
+                  <p>Active buttons: <span id="keys">none</span> </p> 
+                  <button id="reset" type="button"> Reset</button> 
+                </div>
 
             </div>
 
@@ -47,6 +54,8 @@
         </footer>
     </div>
 
+    <!-- laddar p5.js bibliotek -->
+     <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.9.0/p5.min.js"></script>
     <script src="script.js"></script>
 </body>
 
