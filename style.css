@@ -25,7 +25,7 @@
 h1 {
     font-family: 'oswald', system-ui;
     font-size: 3rem;
-    letter-spacing: 10%;
+    letter-spacing: 0.1rem;
     color: #121fcf;
     background-image: linear-gradient(to right, #8a79b7 0%, #8ec55e, #1989d8, #c61f72 100%);
     -webkit-background-clip: text;
@@ -37,7 +37,7 @@ h1 {
 h2 {
     font-family: 'oswald', system-ui;
     font-size: 1rem;
-    letter-spacing: 5%;
+    letter-spacing: 0.05rem;
     color: #1989d8;
 }
 
@@ -128,4 +128,78 @@ body {
 .form-container .btn:hover,
 .open-button:hover {
     opacity: 1;
+}
+
+/* centrerar rubriken */
+.wrapper {
+    width: 100%;
+}
+
+.header {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+}
+
+h1 {
+    margin: 1rem auto;
+    text-align: center;
+}
+
+/* activa knppar och reset button  */
+
+/* Behållare för text och knapp */
+.controls {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 0.8rem;
+    margin-top: 0.3rem;
+}
+
+/* Texten Active buttons */
+.controls p {
+    font-family: 'oswald', system-ui;
+    font-size: 1.3rem;
+    color: #8a79b7;
+    margin: 0;
+}
+
+/* Texten none och aktiva tangenter */
+#keys {
+    color: #1989d8;
+    font-size: 1.3rem;
+}
+
+/* Aktiva tangenter visas som små etiketter */
+.key-chip {
+    display: inline-block;
+    background-color: #8ec55e;
+    color: white;
+    padding: 0.4rem 0.9rem;
+    margin: 0.2rem;
+    border-radius: 20px;
+    font-family: 'oswald', system-ui;
+    font-size: 1.1rem;
+}
+
+/* Reset-knappen */
+#reset {
+    background: linear-gradient(to right, #8a79b7, #1989d8, #c61f72);
+    color: white;
+    border: none;
+    border-radius: 25px;
+    padding: 0.7rem 1.8rem;
+    font-family: 'oswald', system-ui;
+    font-size: 1.5rem;
+    cursor: pointer;
+    transition: transform 0.3s ease, opacity 0.3s ease;
+}
+
+/* Effekt när man håller muspekaren över knappen */
+#reset:hover {
+    transform: scale(1.08);
+    opacity: 0.9;
 }
